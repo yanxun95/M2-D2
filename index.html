@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you will have a short biography section of yourself, and the top albums of your life, 
+the worst album you ever listened to and everything related to the music you love.
+
+ASSIGNMENT RULES
+- The project must be pushed to a new repository and linked in EduFlow by the end of the day.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided and documentation.
+- To test the page, open it with your browser and inspect it with developer tools / device emulator.
+- Use Bootstrap4.6 classes to create the page.
+- Use containers, rows and cols in order to achieve a great responsive layout.
+
+NOTE:
+Even the most experienced designers need inspiration.
+Spend some time surfing the web researching the best way of representing the albums you love.
+Could be the Amazon way, the Spotify or Apple music way or any other music collection out there.
+
+HINT: Manage your time in order to finish the structure and responsiveness before focusing on details.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* EXERCISE 1
+            For every Album we'd like to have a consistent style.
+            Create a class for:
+            - The album container
+            - The album cover
+            - The album title
+            - The album group / singer / dj
+            - The album genre
+            - The album duration
+            - etc
+
+            to make sure you give every album the same consistent appearance.
+         */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .albumTitle {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="navBar">
+      <nav class="nav">
+        <a class="nav-link active" href="#favorite">Favorite Album</a>
+        <a class="nav-link" href="#worst">Worst Album</a>
+        <a class="nav-link" href="#admire">Admire Singer</a>
+        <a class="nav-link" href="#list">List of albums</a>
+      </nav>
+    </div>
+    <!-- EXERCISE 2 
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must link every section in your page
+        -->
+
+    <!-- EXERCISE 3
+            Create a responsive section for your favourite albums.
+            In this section you should have:
+            - 4 albums per row when the screen is very large
+            - 3 albums per row when you are on a tablet (or a smaller viewport)
+            - 2 albums per row when you are on a small screen
+        -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-sm-4 col-lg-3">
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+              class="card-img-top"
+              alt="album"
+            />
+            <div class="card-body">
+              <h5 class="card-title albumTitle">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+              class="card-img-top"
+              alt="album"
+            />
+            <div class="card-body">
+              <h5 class="card-title albumTitle">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+              class="card-img-top"
+              alt="album"
+            />
+            <div class="card-body">
+              <h5 class="card-title albumTitle">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+              class="card-img-top"
+              alt="album"
+            />
+            <div class="card-body">
+              <h5 class="card-title albumTitle">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXERCISE 4
+            Create a section for the album reviews.
+            Pick one of your fav albums, and create a section with:
+            - Cover
+            - Title
+            - Band
+            - Duration
+            - Genre
+            - Tracklist
+            - ... And whatever you think it's interesting about it!
+        -->
+
+    <div class="container" id="favorite">
+      <h1>Favorite album</h1>
+      <div class="card mb-3" style="max-width: 100%">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXWycQ2KwWAcSIzmEPYZEN1CCUcnSoKLs8Jw&usqp=CAU"
+              alt="Favorite album"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">The Weekend</h5>
+              <p class="card-text">
+                Starboy is the third studio album by Canadian singer the Weeknd.
+                It was released on November 25, 2016, through XO and Republic
+                Records. The album features guest appearances from Daft Punk,
+                Lana Del Rey, Kendrick Lamar, and Future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EXERCISE 5
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+
+    <hr />
+    <div class="container" id="worst">
+      <h1>Worst album</h1>
+      <div class="row">
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- EXERCISE 6
+            Do you have any musician / band you admire or you are a fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+
+    <div class="container mt-3" id="admire">
+      <h1>Admire</h1>
+      <div class="card mb-3" style="max-width: 100%">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXWycQ2KwWAcSIzmEPYZEN1CCUcnSoKLs8Jw&usqp=CAU"
+              alt="Favorite album"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">The Weekend</h5>
+              <p class="card-text">
+                Abel Makkonen Tesfaye, known professionally as the Weeknd, is a
+                Canadian singer, songwriter, and record producer. Born in
+                Toronto and raised in Scarborough, Tesfaye began his recording
+                career in 2009 by anonymously uploading his song "Do It" to
+                YouTube.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EXERCISE 7
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+        -->
+
+    <div class="container mt-3" id="list">
+      <h1>List of albums</h1>
+      <div class="row">
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+        <div class="col-6 col-sm-4 col-lg-3">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ad/X_cover.png"
+            class="img-thumbnail"
+            alt="album"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- EXERCISE 8
+            Implement a footer with some information / social links
+        -->
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p><a href="https://www.facebook.com/yanxun.chang/">YanXun Chang</a></p>
+      </div>
+    </footer>
+
+    <!-- ############ EXTRA:
+        EXERCISE 9
+            Create an album details area that is going to be toggled on and off by clicking on the album image
+        -->
+
+    <!-- EXERCISE 10
+            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible) 
+            (hint: look for a boostrap component that can handle the job for you. You can always rely on DOM manipulation if you can't find it)
+        -->
+
+    <!--
+         EXERCISE 11
+            Add in the footer a field that counts, on page load, how many ALBUMS there are on the page 
+        -->
+  </body>
+</html>
